@@ -1,0 +1,283 @@
+/* ── HERO ── */
+.hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; background: #050505;
+}
+.heroBg {
+  position: absolute; inset: -20%;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(90,10,10,0.5) 0%, rgba(5,5,5,0) 70%),
+              radial-gradient(ellipse at 20% 80%, rgba(60,5,5,0.3) 0%, transparent 50%);
+  will-change: transform;
+}
+.heroNoise {
+  position: absolute; inset: 0; opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.heroContent {
+  position: relative; z-index: 1; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  padding: 100px 5% 60px; max-width: 800px;
+}
+.heroLabel {
+  font-size: 12px; letter-spacing: 8px; text-transform: uppercase;
+  color: rgba(255,255,255,0.75); margin-top: 8px;
+  text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+.heroTitle {
+  font-family: var(--font-display); font-weight: 400;
+  font-size: clamp(70px, 11vw, 130px); line-height: 0.95;
+  letter-spacing: 8px; text-transform: uppercase;
+  display: flex; flex-direction: column; align-items: center;
+  color: #ffffff;
+  text-shadow: 0 2px 40px rgba(0,0,0,0.6);
+}
+.heroTitleRed {
+  color: #E83333;
+  text-shadow: 0 0 80px rgba(220,50,50,0.7), 0 2px 20px rgba(0,0,0,0.4);
+}
+.heroDivider {
+  width: 80px; height: 2px; background: rgba(220,50,50,0.9);
+  box-shadow: 0 0 12px rgba(220,50,50,0.5);
+}
+.heroText {
+  font-size: clamp(15px, 1.9vw, 18px); line-height: 1.9;
+  color: rgba(255,255,255,0.8); max-width: 620px; font-weight: 300;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.5);
+}
+.heroCtas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.scrollIndicator {
+  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center;
+}
+.scrollLine {
+  width: 1px; height: 50px;
+  background: linear-gradient(to bottom, rgba(178,34,34,0.8), transparent);
+}
+
+/* ── STATS ── */
+.stats { background: var(--blanc); padding: 0; }
+.statsGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-bottom: 1px solid var(--gris-mid);
+}
+.statItem {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 48px 24px; gap: 10px; text-align: center;
+  border-right: 1px solid var(--gris-mid);
+  position: relative;
+}
+.statItem::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: var(--rouge); transition: width 0.4s ease;
+}
+.statItem:hover::after { width: 60%; }
+.statN { font-family: var(--font-display); font-size: 48px; color: var(--rouge); line-height: 1; }
+.statL { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gris); }
+
+/* ── MOT DU PRÉSIDENT ── */
+.apropos { background: var(--blanc); position: relative; overflow: hidden; }
+.aproposFiligrane {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+}
+.aproposGrid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+
+/* Photo PDG */
+.pdgVisual { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.pdgPhotoWrap {
+  width: 280px; height: 340px; overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(139,26,26,0.15), 0 4px 16px rgba(0,0,0,0.1);
+}
+.pdgPhotoWrap::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: var(--rouge);
+}
+.pdgPhoto { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.pdgPlaceholder {
+  width: 100%; height: 100%; background: var(--gris-clair);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 64px; color: var(--rouge-clair); opacity: 0.4;
+}
+.pdgIdentite { text-align: center; }
+.pdgNom { font-family: var(--font-display); font-size: 22px; color: var(--texte); font-weight: 500; margin-bottom: 4px; }
+.pdgTitre { font-size: 12px; letter-spacing: 1px; color: var(--gris); margin-bottom: 2px; }
+.pdgGroupe { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); font-weight: 600; }
+
+/* Texte */
+.motPresident {
+  font-family: var(--font-display); font-size: 19px; font-style: italic;
+  color: var(--texte); line-height: 1.8; border: none; padding: 0;
+  margin-bottom: 16px;
+}
+.motPresidentSuite {
+  font-family: var(--font-display); font-size: 19px; font-style: italic;
+  color: var(--texte); line-height: 1.8;
+}
+
+/* ── FILIALES ── */
+.filialesSection { background: var(--noir); padding: 100px 0 0; }
+.filialesHeader { text-align: center; margin-bottom: 60px; }
+.filialesGrid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+}
+.filialeCard {
+  padding: 0; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.filialeCard:hover .filialeCardInner { background: rgba(139,26,26,0.05); }
+.filialeCardInner {
+  padding: 48px 36px; height: 100%;
+  display: flex; flex-direction: column; gap: 12px;
+  transition: background 0.3s;
+  border-bottom: 2px solid transparent;
+}
+.filialeCard:hover .filialeCardInner { border-bottom-color: var(--rouge); }
+.filialeIcon { color: var(--rouge-clair); margin-bottom: 4px; }
+
+/* Conteneur centré pour le logo */
+.filialeLogoWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  margin-bottom: 16px;
+}
+.filialeLogo {
+  max-height: 100px;
+  max-width: 220px;
+  object-fit: contain;
+}
+.filialeLogoRaw {
+  max-height: 100px;
+  max-width: 220px;
+  object-fit: contain;
+}
+.filialeSector { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); }
+.filialeName { font-family: var(--font-display); font-size: 24px; color: #1C1C1C; font-weight: 400; }
+.filialeDesc { font-size: 14px; line-height: 1.7; color: rgba(0,0,0,0.5); flex: 1; }
+.filialeLink {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--rouge); transition: gap 0.2s;
+  margin-top: 8px; font-weight: 600;
+}
+.filialeLink:hover { gap: 10px; }
+
+/* ── ÉQUIPE ── */
+.equipe { background: var(--gris-clair); }
+.equipeHeader { text-align: center; margin-bottom: 60px; }
+
+/* Pyramide */
+.equipePdgRow {
+  display: flex; justify-content: center; margin-bottom: 0;
+}
+
+/* Trait vertical depuis Eric */
+.pyramideLine {
+  width: 1px; height: 32px;
+  background: rgba(178,34,34,0.4);
+  margin: 0 auto;
+}
+
+/* Barre horizontale + 3 jambes */
+.pyramideConnector {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  max-width: 900px; margin: 0 auto;
+  position: relative;
+}
+.pyramideConnector::before {
+  content: '';
+  position: absolute; top: 0;
+  left: calc(100% / 6);
+  right: calc(100% / 6);
+  height: 1px;
+  background: rgba(178,34,34,0.3);
+}
+.pyramideLeg {
+  height: 32px;
+  display: flex; justify-content: center;
+}
+.pyramideLeg::after {
+  content: '';
+  width: 1px; height: 100%;
+  background: rgba(178,34,34,0.3);
+}
+
+.equipeGrid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
+  max-width: 900px; margin: 0 auto;
+}
+
+.membreCard {
+  text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.membreCardPdg { margin-bottom: 0; }
+.membreAvatar {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: var(--blanc); border: 2px solid var(--gris-mid);
+  display: flex; align-items: center; justify-content: center;
+  transition: border-color 0.3s;
+}
+.membreAvatarPdg {
+  width: 150px; height: 150px;
+  border-color: var(--rouge);
+  box-shadow: 0 0 0 4px rgba(178,34,34,0.12);
+}
+.membreCard:hover .membreAvatar { border-color: var(--rouge); }
+.membreAvatar span {
+  font-family: var(--font-display); font-size: 32px; color: var(--rouge);
+}
+.membreAvatarPdg span { font-size: 36px; }
+.membreNom { font-family: var(--font-display); font-size: 22px; color: var(--texte); font-weight: 400; }
+.membreTitre {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gris); padding: 8px 20px; border: 1px solid var(--gris-mid);
+  display: inline-block;
+}
+
+/* ── CONTACT ── */
+.contact { background: var(--blanc); }
+.contactGrid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 100px; align-items: start; }
+.contactInfos { display: flex; flex-direction: column; gap: 24px; }
+.contactInfo { display: flex; flex-direction: column; gap: 6px; }
+.contactInfoLabel { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--rouge); font-weight: 600; }
+.contactInfo a, .contactInfo span { font-size: 15px; color: var(--texte-doux); transition: color 0.2s; }
+.contactInfo a:hover { color: var(--rouge); }
+.form { display: flex; flex-direction: column; gap: 16px; }
+.formRow { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form input, .form textarea {
+  width: 100%; padding: 16px 18px;
+  border: 1px solid var(--gris-mid); background: var(--gris-clair);
+  font-family: var(--font-body); font-size: 14px; color: var(--texte);
+  outline: none; transition: border-color 0.2s, background 0.2s;
+}
+.form input:focus, .form textarea:focus {
+  border-color: var(--rouge); background: var(--blanc);
+}
+.form textarea { resize: vertical; min-height: 140px; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1200px) {
+  .filialesGrid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .aproposGrid { grid-template-columns: 1fr; gap: 50px; }
+  .filialesGrid { grid-template-columns: repeat(2, 1fr); }
+  .equipeGrid { grid-template-columns: 1fr 1fr; }
+  .contactGrid { grid-template-columns: 1fr; gap: 50px; }
+}
+@media (max-width: 600px) {
+  .filialesGrid { grid-template-columns: 1fr; }
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .equipeGrid { grid-template-columns: 1fr; }
+  .formRow { grid-template-columns: 1fr; }
+}

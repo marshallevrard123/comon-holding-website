@@ -1,0 +1,18 @@
+# robots.txt — COM'ON Holding
+# https://www.comon-holding.ci
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.comon-holding.ci/sitemap.xml
+
+# Bloquer les crawlers malveillants
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /

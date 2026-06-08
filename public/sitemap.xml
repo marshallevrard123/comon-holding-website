@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil — COM'ON Holding -->
+  <url>
+    <loc>https://www.comon-holding.ci/</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/"/>
+  </url>
+
+  <!-- Com'on Assurances -->
+  <url>
+    <loc>https://www.comon-holding.ci/assurances</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/assurances"/>
+  </url>
+
+  <!-- Vati&Co – letau.net -->
+  <url>
+    <loc>https://www.comon-holding.ci/vati-co</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/vati-co"/>
+  </url>
+
+  <!-- Com'on Services -->
+  <url>
+    <loc>https://www.comon-holding.ci/services</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/services"/>
+  </url>
+
+  <!-- Com'on Distri Agri -->
+  <url>
+    <loc>https://www.comon-holding.ci/distri-agri</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/distri-agri"/>
+  </url>
+
+  <!-- Com'on Agro -->
+  <url>
+    <loc>https://www.comon-holding.ci/agro</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/agro"/>
+  </url>
+
+  <!-- SIGECED -->
+  <url>
+    <loc>https://www.comon-holding.ci/sigeced</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/sigeced"/>
+  </url>
+
+  <!-- Clinique Médicale Espérance de Toumodi -->
+  <url>
+    <loc>https://www.comon-holding.ci/cmet</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.comon-holding.ci/cmet"/>
+  </url>
+
+</urlset>

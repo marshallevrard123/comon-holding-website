@@ -1,0 +1,207 @@
+/* ═══════════════════════════════════════════
+   CMET — CLINIQUE MÉDICALE ESPÉRANCE TOUMODI
+   Palette : Bleu médical · Vert menthe · Blanc
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Couleurs principales */
+  --bleu:        #1565A7;
+  --bleu-clair:  #1E7BC4;
+  --bleu-pale:   #E8F2FB;
+  --bleu-sombre: #0D4780;
+  --vert:        #1E9E8A;
+  --vert-clair:  #25B9A2;
+  --vert-pale:   #E6F7F5;
+  --rose:        #C9797A;      /* couleur du bâtiment CMET */
+  --rose-pale:   #FDF3F3;
+
+  /* Neutres */
+  --blanc:       #FFFFFF;
+  --gris-clair:  #F4F7FA;
+  --gris-mid:    #E4EAF0;
+  --gris:        #8A9AB0;
+  --texte:       #1A2B3C;
+  --texte-doux:  #4A5C70;
+  --noir:        #0D1B2A;
+
+  /* Typographie */
+  --font-titre:  'Playfair Display', Georgia, serif;
+  --font-corps:  'Inter', system-ui, sans-serif;
+
+  /* UI */
+  --radius:      8px;
+  --radius-lg:   16px;
+  --shadow-sm:   0 2px 12px rgba(21,101,167,0.08);
+  --shadow-md:   0 8px 32px rgba(21,101,167,0.12);
+  --shadow-lg:   0 20px 60px rgba(21,101,167,0.16);
+  --transition:  0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-corps);
+  color: var(--texte);
+  background: var(--blanc);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+ul, ol { list-style: none; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--gris-clair); }
+::-webkit-scrollbar-thumb { background: var(--bleu); border-radius: 3px; }
+
+/* ── SELECTION ── */
+::selection { background: var(--bleu-pale); color: var(--bleu-sombre); }
+
+/* ── UTILITAIRES ── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
+.section    { padding: 96px 0; }
+.section-sm { padding: 64px 0; }
+
+/* Typographie */
+h1, h2, h3, h4 {
+  font-family: var(--font-titre);
+  line-height: 1.2;
+  color: var(--texte);
+}
+h1 { font-size: clamp(36px, 5.5vw, 64px); font-weight: 600; }
+h2 { font-size: clamp(26px, 3.5vw, 42px); font-weight: 600; }
+h3 { font-size: clamp(18px, 2vw, 24px); font-weight: 400; }
+p  { line-height: 1.8; color: var(--texte-doux); }
+
+/* Labels */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--bleu);
+  margin-bottom: 14px;
+}
+.label::before {
+  content: '';
+  display: block;
+  width: 20px; height: 2px;
+  background: var(--vert);
+}
+
+.divider {
+  width: 48px; height: 3px;
+  background: linear-gradient(to right, var(--bleu), var(--vert));
+  border-radius: 2px;
+  margin: 16px 0 32px;
+}
+.divider-center { margin: 16px auto 32px; }
+
+/* Boutons — scopés sous .cmet-root pour éviter conflits avec comon-holding */
+.cmet-root .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-family: var(--font-corps);
+  letter-spacing: 0.3px;
+  text-transform: none;
+  text-decoration: none;
+}
+.cmet-root .btn-primary {
+  background: var(--bleu);
+  color: #fff !important;
+  border-color: var(--bleu);
+}
+.cmet-root .btn-primary:hover {
+  background: var(--bleu-sombre);
+  border-color: var(--bleu-sombre);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(21,101,167,0.35);
+}
+.cmet-root .btn-outline {
+  background: transparent;
+  color: var(--bleu) !important;
+  border-color: var(--bleu);
+  border-width: 2px;
+  border-style: solid;
+}
+.cmet-root .btn-outline:hover {
+  background: var(--bleu);
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+.cmet-root .btn-white {
+  background: #fff !important;
+  color: var(--bleu) !important;
+  border-color: #fff;
+  border-width: 2px;
+  border-style: solid;
+}
+.cmet-root .btn-white:hover {
+  background: var(--bleu-pale) !important;
+  color: var(--bleu) !important;
+  transform: translateY(-2px);
+}
+.cmet-root .btn-vert {
+  background: var(--vert);
+  color: #fff !important;
+  border-color: var(--vert);
+}
+.cmet-root .btn-vert:hover {
+  background: var(--vert-clair);
+  border-color: var(--vert-clair);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30,158,138,0.35);
+}
+
+/* Page wrapper avec top padding pour navbar */
+.page-content { padding-top: 80px; }
+
+/* Animation entrée */
+.fade-in { animation: fadeIn 0.5s ease both; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Section header centré */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 64px;
+}
+.section-header .label { justify-content: center; }
+.section-header .divider { margin: 16px auto 24px; }
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.badge-bleu { background: var(--bleu-pale); color: var(--bleu); }
+.badge-vert { background: var(--vert-pale); color: var(--vert); }
+.badge-orange { background: #FEF3E2; color: #D97706; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .section  { padding: 64px 0; }
+  h1 { font-size: 34px; }
+  h2 { font-size: 26px; }
+}

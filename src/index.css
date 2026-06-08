@@ -1,0 +1,106 @@
+/* ── VARIABLES GLOBALES ── */
+:root {
+  --rouge:        #8B1A1A;
+  --rouge-clair:  #B22222;
+  --rouge-sombre: #5C0E0E;
+  --gris:         #7A7A7A;
+  --gris-clair:   #F4F4F2;
+  --gris-mid:     #E8E8E6;
+  --blanc:        #FFFFFF;
+  --noir:         #0A0A0A;
+  --texte:        #1C1C1C;
+  --texte-doux:   #555555;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --radius:       4px;
+  --shadow-sm:    0 2px 12px rgba(0,0,0,0.06);
+  --shadow-md:    0 8px 40px rgba(0,0,0,0.10);
+  --shadow-lg:    0 24px 80px rgba(0,0,0,0.15);
+  --transition:   0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  color: var(--texte);
+  background: var(--blanc);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--noir); }
+::-webkit-scrollbar-thumb { background: var(--rouge); border-radius: 3px; }
+
+/* ── SELECTION ── */
+::selection { background: var(--rouge); color: var(--blanc); }
+
+/* ── PAGE TRANSITION ── */
+.page-enter { animation: pageIn 0.5s ease both; }
+@keyframes pageIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── UTILITAIRES ── */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 5%; }
+.section    { padding: 100px 0; }
+.section-sm { padding: 60px 0; }
+
+.label {
+  display: inline-block;
+  font-size: 10px; letter-spacing: 4px; text-transform: uppercase;
+  font-family: var(--font-body); font-weight: 600;
+  color: var(--rouge); margin-bottom: 16px;
+}
+.divider {
+  width: 56px; height: 2px; background: var(--rouge);
+  margin: 20px 0 36px;
+}
+.divider-center { margin: 20px auto 36px; }
+
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; }
+h1 { font-size: clamp(44px, 7vw, 90px); }
+h2 { font-size: clamp(30px, 4vw, 52px); }
+h3 { font-size: clamp(22px, 2.5vw, 32px); }
+p  { line-height: 1.85; color: var(--texte-doux); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 36px; font-size: 11px; letter-spacing: 3px;
+  text-transform: uppercase; font-weight: 500;
+  transition: var(--transition); font-family: var(--font-body);
+}
+.btn-outline {
+  border: 1.5px solid var(--rouge); color: var(--rouge); background: transparent;
+}
+.btn-outline:hover { background: var(--rouge); color: var(--blanc); }
+.btn-white {
+  border: 1.5px solid rgba(255,255,255,0.5); color: var(--blanc);
+}
+.btn-white:hover { background: rgba(255,255,255,0.12); border-color: var(--blanc); }
+.btn-solid { background: var(--rouge); color: var(--blanc); border: 1.5px solid var(--rouge); }
+.btn-solid:hover { background: var(--rouge-sombre); border-color: var(--rouge-sombre); }
+
+/* ── GRID FILIALES ── */
+.filiales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  h1 { font-size: 42px; }
+  h2 { font-size: 32px; }
+  .section { padding: 70px 0; }
+}

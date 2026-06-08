@@ -1,0 +1,58 @@
+.section { padding: 90px 0 0; background: var(--noir); }
+.header { text-align: center; margin-bottom: 48px; }
+.header .label { color: var(--rouge-clair); }
+.header h2 { color: #fff; }
+.header .divider { background: var(--rouge); margin: 20px auto 0; }
+.subtitle { font-size: 14px; color: rgba(255,255,255,0.4); margin-top: 12px; letter-spacing: 0.5px; }
+
+.mapWrapper {
+  width: 100%;
+  border-top: 2px solid rgba(139,26,26,0.4);
+}
+
+/* ── Popup personnalisé ── */
+.popupInner {
+  padding: 4px 2px;
+  min-width: 200px;
+  font-family: var(--font-body);
+}
+.popupBadge {
+  display: inline-block;
+  font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+  background: var(--rouge); color: #fff;
+  padding: 3px 10px; margin-bottom: 8px;
+}
+.popupSector {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: #888; margin-bottom: 4px;
+}
+.popupName {
+  font-family: var(--font-display); font-size: 18px;
+  color: #111; margin-bottom: 10px; font-weight: 400;
+}
+.popupAddress {
+  font-size: 12px; color: #666; display: flex; align-items: flex-start;
+  gap: 4px; line-height: 1.5; margin-bottom: 14px;
+}
+.popupLink {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 16px; color: #fff;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  font-family: var(--font-body); font-weight: 500;
+  transition: opacity 0.2s;
+}
+.popupLink:hover { opacity: 0.85; }
+
+/* Surcharge styles Leaflet popup */
+:global(.leaflet-popup-content-wrapper) {
+  border-radius: 2px !important;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
+  border: none !important;
+  padding: 0 !important;
+}
+:global(.leaflet-popup-content) {
+  margin: 16px !important;
+}
+:global(.leaflet-popup-tip) {
+  background: #fff !important;
+}

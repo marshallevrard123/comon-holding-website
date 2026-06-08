@@ -1,0 +1,102 @@
+.pageHero {
+  background: linear-gradient(135deg, var(--vert) 0%, var(--bleu) 100%);
+  padding: 120px 5% 64px;
+}
+.pageHero h1 { color: #fff; }
+.pageHero .label { color: rgba(255,255,255,0.65); }
+.pageHero .label::before { background: rgba(255,255,255,0.5); }
+.pageHero .divider { background: linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0.2)); }
+.heroLead { font-size: 17px; color: rgba(255,255,255,0.8); max-width: 640px; line-height: 1.75; margin-top: 12px; }
+.heroLead strong { color: #fff; }
+
+.intro { background: var(--blanc); }
+.introGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.introCards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.introCard {
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;
+}
+.introCard strong { font-family: var(--font-titre); font-size: 48px; font-weight: 600; line-height: 1; }
+.introCard span { font-size: 13px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+.cardBleu { background: var(--bleu-pale); }
+.cardBleu strong, .cardBleu span { color: var(--bleu); }
+.cardVert { background: var(--vert-pale); }
+.cardVert strong, .cardVert span { color: var(--vert); }
+
+.liste { background: var(--gris-clair); }
+.assurancesGrid {
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+}
+.assurancePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--blanc);
+  border: 1px solid var(--gris-mid);
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--texte);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: default;
+}
+.assurancePill:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: var(--vert); }
+.pillIcon { color: var(--bleu); flex-shrink: 0; }
+.pillCheck { color: var(--vert); margin-left: 2px; }
+
+.processus { background: var(--blanc); }
+.etapesGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.etapeCard {
+  text-align: center; padding: 36px 20px;
+  border: 1px solid var(--gris-mid);
+  border-radius: var(--radius-lg);
+  position: relative;
+  background: var(--blanc);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.etapeCard:hover { box-shadow: var(--shadow-sm); transform: translateY(-4px); }
+.etapeNum {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bleu), var(--vert));
+  color: #fff;
+  font-family: var(--font-titre);
+  font-size: 22px;
+  font-weight: 600;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+}
+.etapeTitre { font-family: var(--font-corps); font-size: 15px; font-weight: 600; color: var(--texte); margin-bottom: 10px; }
+.etapeDesc { font-size: 13.5px; line-height: 1.7; }
+
+.verification { background: linear-gradient(135deg, var(--bleu-sombre), var(--vert)); padding: 72px 0; }
+.verifCard {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-lg);
+  padding: 56px 48px;
+  display: flex; align-items: center; gap: 64px;
+  backdrop-filter: blur(8px);
+}
+.verifText { flex: 1; }
+.verifIcon { color: rgba(255,255,255,0.7); margin-bottom: 16px; }
+.verifText h2 { color: #fff; margin-bottom: 14px; }
+.verifText p { color: rgba(255,255,255,0.72); font-size: 15px; line-height: 1.75; }
+.verifBtns { display: flex; flex-direction: column; gap: 12px; flex-shrink: 0; }
+.btnWa { background: #25D366; color: #fff; border: 2px solid #25D366; border-radius: var(--radius); padding: 14px 24px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); }
+.btnWa:hover { background: #1ebe5c; transform: translateY(-2px); }
+.btnContact { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.35); border-radius: var(--radius); padding: 14px 24px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; transition: var(--transition); }
+.btnContact:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.6); transform: translateY(-2px); }
+
+@media (max-width: 1024px) {
+  .etapesGrid { grid-template-columns: repeat(2, 1fr); }
+  .introGrid  { grid-template-columns: 1fr; gap: 40px; }
+  .verifCard  { flex-direction: column; gap: 36px; text-align: center; }
+  .verifBtns  { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+}
+@media (max-width: 600px) {
+  .etapesGrid { grid-template-columns: 1fr; }
+  .introCards { grid-template-columns: 1fr; }
+}

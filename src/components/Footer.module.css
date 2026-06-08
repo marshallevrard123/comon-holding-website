@@ -1,0 +1,35 @@
+.footer { background: var(--noir); color: #888; padding: 80px 0 0; }
+.grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px;
+  padding-bottom: 60px; border-bottom: 1px solid #1C1C1C;
+}
+.brand { display: flex; flex-direction: column; gap: 12px; }
+.brandText { line-height: 1.1; margin-top: 4px; }
+.top  { display: block; font-size: 11px; letter-spacing: 5px; color: #555; text-transform: uppercase; }
+.bottom { display: block; font-family: var(--font-display); font-size: 20px; letter-spacing: 4px; color: var(--rouge-clair); text-transform: uppercase; }
+.tagline { font-size: 12px; color: #444; line-height: 1.7; max-width: 220px; }
+.colTitle {
+  font-family: var(--font-body); font-size: 10px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--rouge); font-weight: 600;
+  margin-bottom: 24px;
+}
+.list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.footerLink { font-size: 13px; color: #666; transition: color 0.2s; }
+.footerLink:hover { color: var(--rouge-clair); }
+.address { font-style: normal; display: flex; flex-direction: column; gap: 12px; }
+.address p { font-size: 13px; color: #555; }
+.bottom {
+  padding: 24px 0;
+}
+.bottom > div {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px; letter-spacing: 1px; color: #333;
+}
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .grid { grid-template-columns: 1fr; }
+  .bottom > div { flex-direction: column; gap: 8px; text-align: center; }
+}

@@ -1,0 +1,21 @@
+.wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: float linear infinite;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px)           translateX(0px)         scale(1);   }
+  25%  { transform: translateY(-18px)         translateX(var(--drift)) scale(1.1); }
+  50%  { transform: translateY(-32px)         translateX(0px)          scale(0.9); }
+  75%  { transform: translateY(-18px)         translateX(calc(var(--drift) * -0.5)) scale(1.05); }
+  100% { transform: translateY(0px)           translateX(0px)          scale(1);   }
+}

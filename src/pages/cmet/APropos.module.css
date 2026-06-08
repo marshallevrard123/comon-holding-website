@@ -1,0 +1,190 @@
+.pageHero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.heroImg {
+  position: absolute; inset: 0;
+}
+.heroImg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 40%;
+}
+.heroImgOverlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(10,30,55,0.88) 40%, rgba(10,30,55,0.4) 100%);
+}
+.heroContent {
+  position: relative; z-index: 2;
+  padding: 100px 5% 64px;
+  max-width: 700px;
+}
+.heroContent h1 { color: #fff; }
+.heroContent .label { color: rgba(255,255,255,0.7); }
+.heroContent .label::before { background: rgba(255,255,255,0.5); }
+.heroContent .divider { background: linear-gradient(to right, rgba(255,255,255,0.6), rgba(255,255,255,0.2)); }
+.heroLead {
+  font-size: 17px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.75;
+  max-width: 560px;
+  margin-top: 8px;
+}
+
+/* Presentation */
+.presentation { background: var(--blanc); }
+.presGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.presStats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 20px;
+  position: sticky; top: 120px;
+}
+.presStat {
+  background: var(--gris-clair);
+  border: 1px solid var(--gris-mid);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.presStat:hover { box-shadow: var(--shadow-sm); transform: translateY(-3px); }
+.presStatIcon { color: var(--bleu); }
+.presStat strong { font-family: var(--font-titre); font-size: 36px; color: var(--bleu); font-weight: 600; }
+.presStat span { font-size: 13px; color: var(--gris); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* MVV */
+.mvv { background: var(--gris-clair); }
+.mvvGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.mvvCard {
+  background: var(--blanc);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  border: 1px solid var(--gris-mid);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.mvvCard:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.mvvIcon {
+  width: 60px; height: 60px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+}
+.mvvBlue  { background: var(--bleu-pale);  color: var(--bleu); }
+.mvvGreen { background: var(--vert-pale);  color: var(--vert); }
+.mvvRose  { background: var(--rose-pale);  color: var(--rose); }
+.mvvCard h3 { margin-bottom: 14px; font-size: 20px; }
+.mvvCard p  { font-size: 14px; line-height: 1.75; }
+
+/* Valeurs */
+.valeurs { background: var(--blanc); }
+.valeursGrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.valeurCard {
+  padding: 32px; border: 1px solid var(--gris-mid); border-radius: var(--radius-lg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.valeurCard:hover { border-color: var(--bleu); box-shadow: var(--shadow-sm); }
+.valeurIcon {
+  width: 48px; height: 48px;
+  background: var(--bleu-pale);
+  color: var(--bleu);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.valeurTitre { font-size: 18px; margin-bottom: 10px; }
+.valeurDesc  { font-size: 14px; line-height: 1.75; }
+
+/* Timeline */
+.timeline { background: var(--gris-clair); }
+.timelineList {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timelineList::before {
+  content: '';
+  position: absolute;
+  left: 120px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--bleu), var(--vert));
+}
+.timelineItem {
+  display: grid;
+  grid-template-columns: 120px 24px 1fr;
+  gap: 0 24px;
+  margin-bottom: 40px;
+  align-items: start;
+}
+.timelineYear {
+  font-family: var(--font-titre);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--bleu);
+  text-align: right;
+  padding-top: 4px;
+}
+.timelineSoon .timelineYear { color: var(--vert); }
+.timelineDot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--bleu);
+  border: 3px solid var(--blanc);
+  box-shadow: 0 0 0 2px var(--bleu);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+.timelineSoon .timelineDot { background: var(--vert); box-shadow: 0 0 0 2px var(--vert); }
+.timelineContent {
+  background: var(--blanc);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  border: 1px solid var(--gris-mid);
+}
+.timelineContent h4 { font-family: var(--font-corps); font-size: 15px; font-weight: 600; color: var(--texte); margin-bottom: 6px; }
+.timelineContent p  { font-size: 13.5px; line-height: 1.7; }
+
+/* Future */
+.future { background: var(--blanc); }
+.futureGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.futureList { display: flex; flex-direction: column; gap: 10px; }
+.futureListItem { display: flex; align-items: center; gap: 10px; font-size: 14.5px; color: var(--texte-doux); }
+.futureImgs { position: relative; height: 480px; }
+.futureImg1 {
+  position: absolute;
+  top: 0; left: 0;
+  width: 80%; height: 320px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+.futureImg2 {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 65%; height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--blanc);
+}
+
+/* Timeline soon variant */
+.timelineSoon { opacity: 0.8; }
+.timelineSoon .timelineYear { color: var(--vert); opacity: 0.7; font-style: italic; }
+.timelineSoon .timelineDot  { background: var(--vert); opacity: 0.6; }
+
+@media (max-width: 1024px) {
+  .presGrid { grid-template-columns: 1fr; }
+  .mvvGrid  { grid-template-columns: 1fr; }
+  .futureGrid { grid-template-columns: 1fr; }
+  .futureImgs { height: 320px; }
+}
+@media (max-width: 768px) {
+  .valeursGrid { grid-template-columns: 1fr; }
+  .timelineList::before { left: 80px; }
+  .timelineItem { grid-template-columns: 80px 20px 1fr; gap: 0 16px; }
+  .timelineYear { font-size: 16px; }
+  .futureImg1, .futureImg2 { position: static; width: 100%; height: 200px; margin-bottom: 12px; }
+  .futureImgs { height: auto; }
+}
