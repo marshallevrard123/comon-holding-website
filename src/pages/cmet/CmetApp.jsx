@@ -32,13 +32,13 @@ export default function CmetApp() {
         title="CMET — Clinique Médicale Espérance de Toumodi"
         description="La Clinique Médicale Espérance de Toumodi (CMET) offre des soins pluridisciplinaires : médecine générale, gynécologie, pédiatrie, chirurgie, cardiologie, laboratoire et imagerie médicale à Toumodi, Côte d'Ivoire."
         slug="/cmet"
-        image="https://www.comon-holding.ci/cmet/hero.jpg"
+        image="https://www.comonholding.com/cmet/hero.jpg"
         favicon="/favicon-cmet.ico"
         jsonLd={{
           '@type': 'MedicalClinic',
           name: 'Clinique Médicale Espérance de Toumodi (CMET)',
           description: "Clinique pluridisciplinaire à Toumodi offrant des soins de qualité en médecine générale, gynécologie-obstétrique, pédiatrie, chirurgie, cardiologie, diabétologie, ophtalmologie, dentisterie, laboratoire et imagerie médicale.",
-          url: 'https://www.comon-holding.ci/cmet',
+          url: 'https://www.comonholding.com/cmet',
           telephone: '+2250707840220',
           address: {
             '@type': 'PostalAddress',

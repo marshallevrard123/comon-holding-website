@@ -262,13 +262,13 @@ export default function Agro() {
         title="COM'ON Agro — Agro-industrie en Côte d'Ivoire"
         description="COM'ON Agro est la filiale agro-industrielle du Groupe COM'ON Holding. Transformation fruitière, aviculture, maraîchage et distribution alimentaire en Côte d'Ivoire."
         slug="/agro"
-        image="https://www.comon-holding.ci/agro/hero-agro.jpg"
+        image="https://www.comonholding.com/agro/hero-agro.jpg"
         favicon="/favicon-agro.ico"
         jsonLd={{
           '@type': 'LocalBusiness',
           name: "COM'ON Agro",
           description: "Filiale agro-industrielle du Groupe COM'ON Holding spécialisée en transformation fruitière, aviculture et distribution alimentaire.",
-          url: 'https://www.comon-holding.ci/agro',
+          url: 'https://www.comonholding.com/agro',
           telephone: '+2250711461847',
           address: {
             '@type': 'PostalAddress',

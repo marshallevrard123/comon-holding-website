@@ -178,13 +178,13 @@ export default function DistriAgri() {
         title="COM'ON DISTRI-AGRI — Distribution & Commerce en Côte d'Ivoire"
         description="COM'ON DISTRI-AGRI, spécialiste de la distribution alimentaire et du commerce en Côte d'Ivoire. Jus de fruits, riz, produits vivriers locaux et importés. Présent à Abidjan et Yamoussoukro."
         slug="/distri-agri"
-        image="https://www.comon-holding.ci/distri/stock-jus.png"
+        image="https://www.comonholding.com/distri/stock-jus.png"
         favicon="/favicon-distri.ico"
         jsonLd={{
           '@type': 'LocalBusiness',
           name: "COM'ON DISTRI-AGRI",
           description: "Distribution alimentaire et commerce en Côte d'Ivoire. Jus de fruits, riz, vivriers locaux et importés.",
-          url: 'https://www.comon-holding.ci/distri-agri',
+          url: 'https://www.comonholding.com/distri-agri',
           telephone: '+2250711461847',
           address: {
             '@type': 'PostalAddress',

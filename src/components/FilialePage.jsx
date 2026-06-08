@@ -162,8 +162,8 @@ export default function FilialePage({
           '@type': 'LocalBusiness',
           name,
           description: paragraphs[0] || tagline,
-          url: url || `https://www.comon-holding.ci/${slug}`,
-          parentOrganization: { '@type': 'Organization', name: "COM'ON Holding", url: 'https://www.comon-holding.ci' },
+          url: url || `https://www.comonholding.com/${slug}`,
+          parentOrganization: { '@type': 'Organization', name: "COM'ON Holding", url: 'https://www.comonholding.com' },
           address: contact?.adresse
             ? { '@type': 'PostalAddress', streetAddress: contact.adresse, addressCountry: 'CI' }
             : undefined,

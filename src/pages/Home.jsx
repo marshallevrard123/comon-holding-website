@@ -109,13 +109,13 @@ export default function Home() {
           foundingLocation: { '@type': 'Place', name: 'Abidjan, Côte d\'Ivoire' },
           areaServed: 'Côte d\'Ivoire',
           subOrganization: [
-            { '@type': 'Organization', name: "Com'on Assurances",   url: 'https://www.comon-holding.ci/assurances' },
+            { '@type': 'Organization', name: "Com'on Assurances",   url: 'https://www.comonholding.com/assurances' },
             { '@type': 'Organization', name: 'Vati&Co (letau.net)', url: 'https://letau.net' },
-            { '@type': 'Organization', name: "Com'on Services",     url: 'https://www.comon-holding.ci/services' },
-            { '@type': 'Organization', name: "Com'on Distri Agri",  url: 'https://www.comon-holding.ci/distri-agri' },
-            { '@type': 'Organization', name: "Com'on Agro",         url: 'https://www.comon-holding.ci/agro' },
-            { '@type': 'Organization', name: 'SIGECED',             url: 'https://www.comon-holding.ci/sigeced' },
-            { '@type': 'Organization', name: 'Clinique Médicale Espérance de Toumodi', url: 'https://www.comon-holding.ci/cmet' },
+            { '@type': 'Organization', name: "Com'on Services",     url: 'https://www.comonholding.com/services' },
+            { '@type': 'Organization', name: "Com'on Distri Agri",  url: 'https://www.comonholding.com/distri-agri' },
+            { '@type': 'Organization', name: "Com'on Agro",         url: 'https://www.comonholding.com/agro' },
+            { '@type': 'Organization', name: 'SIGECED',             url: 'https://www.comonholding.com/sigeced' },
+            { '@type': 'Organization', name: 'Clinique Médicale Espérance de Toumodi', url: 'https://www.comonholding.com/cmet' },
           ],
         }}
       />

@@ -75,7 +75,7 @@ export default function Accueil() {
         title="CMET Toumodi — Soins Médicaux de Qualité en Côte d'Ivoire"
         description="Bienvenue à la Clinique Médicale Espérance de Toumodi. Soins pluridisciplinaires disponibles 24h/24 : médecine générale, gynécologie, pédiatrie, chirurgie, cardiologie, laboratoire et imagerie."
         slug="/cmet"
-        image="https://www.comon-holding.ci/images/hero.jpg"
+        image="https://www.comonholding.com/images/hero.jpg"
         favicon="/favicon-cmet.ico"
       />
 

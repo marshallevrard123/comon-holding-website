@@ -324,13 +324,13 @@ export default function Sigeced() {
         title="SIGECED — BTP & Génie Civil en Côte d'Ivoire"
         description="SIGECED, filiale BTP du Groupe COM'ON Holding. Construction, génie civil, rénovation, travaux publics et aménagement intérieur en Côte d'Ivoire."
         slug="/sigeced"
-        image="https://www.comon-holding.ci/sigeced/hero.jpg"
+        image="https://www.comonholding.com/sigeced/hero.jpg"
         favicon="/favicon-sigeced.ico"
         jsonLd={{
           '@type': 'LocalBusiness',
           name: 'SIGECED',
           description: "Filiale BTP du Groupe COM'ON Holding spécialisée en construction, génie civil et travaux publics.",
-          url: 'https://www.comon-holding.ci/sigeced',
+          url: 'https://www.comonholding.com/sigeced',
           telephone: '+2250707715789',
           address: {
             '@type': 'PostalAddress',
