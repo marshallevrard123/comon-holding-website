@@ -276,7 +276,22 @@
   .contactGrid { grid-template-columns: 1fr; gap: 50px; }
 }
 @media (max-width: 600px) {
-  .filialesGrid { grid-template-columns: 1fr; }
+  .filialesGrid {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 0;
+    padding-bottom: 12px;
+  }
+  .filialesGrid::-webkit-scrollbar { height: 4px; }
+  .filialesGrid::-webkit-scrollbar-thumb { background: rgba(178,34,34,0.4); border-radius: 2px; }
+  .filialeCard {
+    min-width: 78vw;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
   .statsGrid { grid-template-columns: repeat(2, 1fr); }
   .equipeGrid { grid-template-columns: 1fr; }
   .formRow { grid-template-columns: 1fr; }
