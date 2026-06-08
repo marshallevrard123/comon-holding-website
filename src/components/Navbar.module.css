@@ -120,7 +120,26 @@
   color: var(--rouge); background: rgba(139,26,26,0.04);
   border-bottom: 1px solid var(--gris-mid); font-weight: 600;
 }
-.mobileSector { font-size: 9px; color: var(--gris); letter-spacing: 1px; text-transform: none; }
+.mobileSepBtn {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%; padding: 14px 5%; font-size: 9px; letter-spacing: 4px;
+  text-transform: uppercase; color: var(--rouge);
+  background: rgba(139,26,26,0.04);
+  border: none; border-bottom: 1px solid var(--gris-mid);
+  font-weight: 600; cursor: pointer; font-family: inherit;
+}
+.mobileSepBtn:hover { background: rgba(139,26,26,0.08); }
+.mobileLinkSub {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 5% 12px 8%;
+  border-bottom: 1px solid var(--gris-mid);
+  text-decoration: none; color: var(--texte);
+  transition: background 0.2s;
+}
+.mobileLinkSub:hover { background: rgba(139,26,26,0.04); }
+.mobileSubLogo { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }
+.mobileSubName { display: block; font-size: 13px; font-weight: 600; color: var(--texte); }
+.mobileSector { font-size: 9px; color: var(--gris); letter-spacing: 1px; text-transform: none; display: block; margin-top: 2px; }
 
 @media (max-width: 900px) {
   .links { display: none; }

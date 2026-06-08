@@ -16,9 +16,10 @@ const FILIALES = [
 ]
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false)
-  const [menuOpen, setMenuOpen]   = useState(false)
-  const [dropOpen, setDropOpen]   = useState(false)
+  const [scrolled, setScrolled]       = useState(false)
+  const [menuOpen, setMenuOpen]       = useState(false)
+  const [dropOpen, setDropOpen]       = useState(false)
+  const [filialesOpen, setFilialesOpen] = useState(false)
   const [dateStr, setDateStr]     = useState('')
   const location  = useLocation()
   const dropRef   = useRef(null)
@@ -32,7 +33,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => { setMenuOpen(false); setDropOpen(false) }, [location])
+  useEffect(() => { setMenuOpen(false); setDropOpen(false); setFilialesOpen(false) }, [location])
 
   // Ferme le dropdown si clic en dehors
   useEffect(() => {
@@ -144,12 +145,34 @@ export default function Navbar() {
             {navLinks.map(l => (
               <a key={l.to} href={l.to} className={styles.mobileLink}>{l.label}</a>
             ))}
-            <div className={styles.mobileSep}>Nos Filiales</div>
-            {FILIALES.map(f => (
-              <Link key={f.slug} to={`/${f.slug}`} className={styles.mobileLink}>
-                {f.name} <span className={styles.mobileSector}>— {f.sector}</span>
-              </Link>
-            ))}
+            <button
+              className={styles.mobileSepBtn}
+              onClick={() => setFilialesOpen(o => !o)}
+            >
+              Nos Filiales
+              <ChevronDown size={15} className={`${styles.chevron} ${filialesOpen ? styles.chevronOpen : ''}`} />
+            </button>
+            <AnimatePresence>
+              {filialesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.25 }}
+                  style={{ overflow: 'hidden' }}
+                >
+                  {FILIALES.map(f => (
+                    <Link key={f.slug} to={`/${f.slug}`} className={styles.mobileLinkSub}>
+                      <img src={f.logo} alt={f.name} className={styles.mobileSubLogo} />
+                      <div>
+                        <span className={styles.mobileSubName}>{f.name}</span>
+                        <span className={styles.mobileSector}>{f.sector}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         )}
       </AnimatePresence>
