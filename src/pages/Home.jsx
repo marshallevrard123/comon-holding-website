@@ -268,51 +268,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ══ ÉQUIPE ══ */}
-      <section className={`section ${styles.equipe}`} id="equipe">
-        <div className="container">
-          <motion.div className={styles.equipeHeader}
-            variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-            <p className="label">Notre Direction</p>
-            <h2>L'équipe dirigeante</h2>
-            <div className="divider divider-center" />
-          </motion.div>
-
-          {/* Sommet de la pyramide — PDG */}
-          <div className={styles.equipePdgRow}>
-            <motion.div className={`${styles.membreCard} ${styles.membreCardPdg}`}
-              variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-              <div className={`${styles.membreAvatar} ${styles.membreAvatarPdg}`}>
-                <span>{pdg.initials}</span>
-              </div>
-              <h3 className={styles.membreNom}>{pdg.name}</h3>
-              <p className={styles.membreTitre}>{pdg.titre}</p>
-            </motion.div>
-          </div>
-
-          {/* Connecteur pyramide — trait vertical + barre horizontale + 3 jambes */}
-          <div className={styles.pyramideLine} />
-          <div className={styles.pyramideConnector}>
-            <div className={styles.pyramideLeg} />
-            <div className={styles.pyramideLeg} />
-            <div className={styles.pyramideLeg} />
-          </div>
-
-          {/* Base de la pyramide — 3 dirigeants */}
-          <div className={styles.equipeGrid}>
-            {dirigeants.map((d, i) => (
-              <motion.div key={d.name} className={styles.membreCard}
-                variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i}>
-                <div className={styles.membreAvatar}>
-                  <span>{d.initials}</span>
-                </div>
-                <h3 className={styles.membreNom}>{d.name}</h3>
-                <p className={styles.membreTitre}>{d.titre}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ══ ÉQUIPE — masqué temporairement ══ */}
 
       {/* ══ CARTE ══ */}
       <Suspense fallback={
