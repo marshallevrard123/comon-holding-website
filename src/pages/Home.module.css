@@ -46,6 +46,12 @@
   text-shadow: 0 1px 10px rgba(0,0,0,0.5);
 }
 .heroCtas { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+.heroEmblem {
+  height: clamp(80px, 10vw, 110px);
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 0 30px rgba(178,34,34,0.6));
+}
 .scrollIndicator {
   position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center;

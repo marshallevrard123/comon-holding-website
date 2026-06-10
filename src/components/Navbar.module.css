@@ -17,17 +17,14 @@
   display: flex; align-items: center; justify-content: space-between;
   max-width: 1280px; margin: 0 auto; padding: 0 5%; height: 76px;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brandText { line-height: 1.1; }
-.brandTop {
-  display: block; font-size: 11px; letter-spacing: 5px; text-transform: uppercase;
-  font-weight: 400; color: var(--gris); transition: color 0.3s;
+.brand { display: flex; align-items: center; }
+.brandLogo {
+  height: 46px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s;
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.15));
 }
-.brandBottom {
-  display: block; font-family: var(--font-display); font-size: 17px;
-  letter-spacing: 4px; text-transform: uppercase; color: var(--rouge);
-}
-.dark .brandTop { color: rgba(255,255,255,0.5); }
 
 /* Date badge */
 .dateBadge {

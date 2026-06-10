@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Emblem from './Emblem'
 import styles from './Footer.module.css'
 
 const filiales = [
@@ -18,10 +17,12 @@ export default function Footer() {
       <div className={`container ${styles.grid}`}>
         {/* Brand */}
         <div className={styles.brand}>
-          <Emblem size={50} color="#B22222" />
-          <div className={styles.brandText}>
-            <span className={styles.top}>Com'on</span>
-            <span className={styles.bottom}>Holding</span>
+          <div className={styles.brandRow}>
+            <img src="/logos/emblem-clean.png" alt="" className={styles.brandEmblem} aria-hidden="true" />
+            <div className={styles.brandText}>
+              <span className={styles.brandName}>Com'on</span>
+              <span className={styles.brandSub}>Holding</span>
+            </div>
           </div>
           <p className={styles.tagline}>
             Groupe ivoirien · Innovation · Excellence · Développement

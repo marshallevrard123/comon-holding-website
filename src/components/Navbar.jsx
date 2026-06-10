@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Calendar, ChevronDown } from 'lucide-react'
-import Emblem from './Emblem'
 import styles from './Navbar.module.css'
 
 const FILIALES = [
@@ -67,11 +66,7 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className={styles.brand}>
-          <Emblem size={38} color={isDark ? '#B22222' : '#8B1A1A'} />
-          <div className={styles.brandText}>
-            <span className={styles.brandTop}>Com'on</span>
-            <span className={styles.brandBottom}>Holding</span>
-          </div>
+          <img src="/logos/holding.png" alt="COM'ON Holding" className={styles.brandLogo} />
         </Link>
 
         {/* Date */}

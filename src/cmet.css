@@ -4,25 +4,27 @@
    ═══════════════════════════════════════════ */
 
 :root {
-  /* Couleurs principales */
+  /* Couleurs principales — Charte CMET officielle */
   --bleu:        #1565A7;
   --bleu-clair:  #1E7BC4;
   --bleu-pale:   #E8F2FB;
   --bleu-sombre: #0D4780;
-  --vert:        #1E9E8A;
-  --vert-clair:  #25B9A2;
-  --vert-pale:   #E6F7F5;
-  --rose:        #C9797A;      /* couleur du bâtiment CMET */
-  --rose-pale:   #FDF3F3;
+  --vert:        #002000;
+  --vert-clair:  #0A4A0A;
+  --vert-pale:   #E6F0E6;
+  --rouge:       #EE0202;
+  --rouge-pale:  #FDE8E8;
+  --rose:        #EE0202;
+  --rose-pale:   #FDE8E8;
 
   /* Neutres */
-  --blanc:       #FFFFFF;
+  --blanc:       #FAFAFA;
   --gris-clair:  #F4F7FA;
   --gris-mid:    #E4EAF0;
   --gris:        #8A9AB0;
-  --texte:       #1A2B3C;
+  --texte:       #1F1E1C;
   --texte-doux:  #4A5C70;
-  --noir:        #0D1B2A;
+  --noir:        #1F1E1C;
 
   /* Typographie */
   --font-titre:  'Playfair Display', Georgia, serif;

@@ -11,9 +11,9 @@ export default function Services() {
       tagline="L'acquisition de matériels professionnels au service de votre activité."
       description={`Com'on Services est la filiale commerciale du groupe COM'ON Holding, spécialisée dans l'acquisition et la fourniture de matériels professionnels à destination des entreprises, institutions et collectivités.\n\nDe la voiture de société à l'ambulance médicalisée, en passant par des équipements techniques spécialisés, Com'on Services répond aux besoins les plus exigeants avec réactivité et fiabilité.`}
       logo="/logos/services.png"
-      heroColor="#111111"
-      primaryColor="#CC0000"
-      accentColor="#888888"
+      heroColor="#4F4F4F"
+      primaryColor="#EF0E00"
+      accentColor="#A6A6A6"
       lightBg="#F6F6F6"
       services={[
         { title: "Véhicules de Société",            icon: Car,           desc: "Fourniture de véhicules utilitaires, berlines et 4x4 pour les flottes d'entreprise." },

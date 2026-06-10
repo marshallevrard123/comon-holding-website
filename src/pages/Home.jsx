@@ -127,7 +127,7 @@ export default function Home() {
         <div className={styles.heroNoise} />
         <motion.div className={styles.heroContent} style={{ opacity: heroOpacity }}>
           <motion.div variants={fadeUp} initial="hidden" animate="visible" custom={0}>
-            <Emblem size={90} color="#B22222" />
+            <img src="/logos/emblem-clean.png" alt="COM'ON Holding" className={styles.heroEmblem} />
           </motion.div>
           <motion.p className={styles.heroLabel} variants={fadeUp} initial="hidden" animate="visible" custom={1}>
             Abidjan · Côte d'Ivoire
@@ -175,7 +175,7 @@ export default function Home() {
       <section className={`section ${styles.apropos}`} id="apropos">
         {/* Emblème filigrane en fond */}
         <div className={styles.aproposFiligrane} aria-hidden="true">
-          <Emblem size={500} color="#B22222" />
+          <img src="/logos/emblem-clean.png" alt="" style={{ width: 500, opacity: 0.07 }} />
         </div>
         <div className="container">
           <div className={styles.aproposGrid}>
